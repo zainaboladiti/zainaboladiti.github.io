@@ -21,7 +21,7 @@ tagline: Secure Development | Cybersecurity Analyst | Cloud and Application Secu
 description: >- # used by seo meta and the atom feed
   From the front lines of the SOC to the core of the code, this is the technical journal of a Cybersecurity Analyst. Expect practical insights and real-world application across the DevSecOps pipeline, covering everything from hands-on Vulnerability Management and Threat Hunting to navigating complex Incident Response scenarios, all designed to bridge the gap between building software and securing it.
 
-# Fill in the protocol & hostname for your site.
+# Fill in the protocol & host: for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://securitywithzee.io"
 

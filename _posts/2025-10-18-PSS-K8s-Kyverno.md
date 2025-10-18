@@ -6,7 +6,6 @@ tags: [cloud security, kubernetes security, kubernetes policies, pod security st
 layout: post
 publish: true
 comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
-author: zainab oladiti
 image:
   path: assets/headers/k8s-security.jpg
   alt: Pod Security Standards and Policies in Kubernetes using Kyverno and OPA Gatekeeper (Part 1)
