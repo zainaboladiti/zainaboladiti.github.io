@@ -286,5 +286,5 @@ Together, these Kyverno policies not only protect the cluster from insecure conf
 
 ---
 
-Continue to [Part 2](#anchor) where we implement OPA Gatekeeper policies and CI/CD integration.
+Continue to [Part 2] where we implement OPA Gatekeeper policies and CI/CD integration.
 
