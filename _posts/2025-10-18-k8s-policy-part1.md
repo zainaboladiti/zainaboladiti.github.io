@@ -2,7 +2,7 @@
 title: "Kubernetes Policy-as-Code using Kyverno and OPA Gatekeeper (Part 1)"
 date: 2025-10-18 10:00:00 +0000
 categories: [DevSecOps, Cloud Security]
-tags: [cloud security, kubernetes security, kubernetes policies, Pod security standards, kyverno, devsecosps, cloud native, policy-as-code, container-security,]
+tags: [cloud security, kubernetes security, kubernetes policies, Pod security standards, kyverno, devsecosps, cloud native, policy-as-code, container-security]
 layout: post
 publish: true
 comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
