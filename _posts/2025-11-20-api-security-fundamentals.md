@@ -10,11 +10,7 @@ comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
 
 Application Programming Interface (APIs) are modern applications backbone, they connect mobile apps to servers and allow third-party services integration. However, the connectivity comes with a significant challenge that makes APIs prime targets for attackers.
 
-## Why APIs Are Under Attack
-
-Unlike traditional web applications, APIs are designed to be discoverable and accessible. This makes them easy targets. Attackers systematically search for flaws in API implementations—excessive permissions, logic errors, or endpoints that return too much information. Once discovered, these vulnerabilities can be exploited to cause serious damage.
-
-The attack pattern differs from conventional security threats. Rather than following a complex kill chain, API attacks are often straightforward: find a vulnerability, exploit it, cause a breach. This simplicity makes API security testing absolutely critical.
+Unlike traditional web applications, APIs are designed to be discoverable and accessible which makes them easy targets. The attack pattern differs from conventional security threats. Rather than following a complex kill chain, API attacks are often straightforward: find a vulnerability, exploit it, cause a breach. This simplicity makes API security testing absolutely critical.
 
 ## Understanding Common API Vulnerabilities
 
