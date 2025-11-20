@@ -10,7 +10,7 @@ comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
 
 Recently, I completed the API Security Fundamentals course on APISec University and the experience has been eye-opening. The course covered everything from basic concepts to attack vectors, and I wanted to share some of the key insights that every developer and security professional should understand.
 
-Application Programming Interface (APIs) are modern applications backbone, they connect mobile apps to servers and allow third-party services integration. However, the connectivity comes with a significant challenge that makes APIs prime targets for attackers.
+Application Programming Interface (APIs) are modern applications backbone that connect mobile apps to servers and allow third-party services integration. However, the connectivity comes with a significant challenge that makes APIs prime targets for attackers.
 
 Unlike traditional web applications, APIs are designed to be discoverable and accessible which makes them easy targets. API attack pattern differs from conventional security threats: rather than following a kill chain, API attacks often find a vulnerability, exploit it and cause a breach. This makes API security testing critical.
 
@@ -56,9 +56,9 @@ Prevention starts with good practices.
 
 ## Why API Security Matters
 
-These breaches demonstrate that API security failures lead to some of the most significant data exposures in recent years. The cost isn't just financial—it includes reputation damage, regulatory penalties, and loss of customer trust. As APIs continue to proliferate, security can't be an afterthought.
+API Security breaches demonstrate that API security failures lead to some of the most significant data exposures in recent years. The cost isn't just financial, it includes reputation damage, regulatory penalties and loss of customer trust. As APIs continue to proliferate, security can't be an afterthought.
 
-The fundamentals covered here provide a starting point, but API security is a continuous journey. Stay informed about emerging threats, regularly audit your APIs, and foster a security-conscious culture within your development teams. Your APIs are the doors to your data—make sure only the right people can open them.
+The fundamentals covered here provide a starting point, but API security is a continuous journey. Stay informed about emerging threats, regularly audit your APIs and foster a security-conscious culture within your development teams. Your APIs are the doors to your data, make sure only the right people can access them.
 
 ## References
 [1] OWASP API Security Top 10. Available at: https://owasp.org/API-Security/editions/2023/en/0x11-t10/
