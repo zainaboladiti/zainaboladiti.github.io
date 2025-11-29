@@ -1,6 +1,5 @@
-
 ---
-title: "API Security Story: Massive Data Exposure via Dating App "Raw""
+title: "API Security Story, Massive Data Exposure via Dating App 'Raw'"
 date: 2025-11-20 10:00:00 +0000
 categories: [AppSec, API Security]
 tags: [api-security, bola, idor, dataprivacy, APISecurityStory, InfoSec, application security, owasp top 10]
