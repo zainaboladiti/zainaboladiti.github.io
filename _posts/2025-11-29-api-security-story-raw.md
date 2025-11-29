@@ -6,7 +6,9 @@ tags: [api-security, bola, idor, dataprivacy, APISecurityStory, InfoSec, applica
 
 layout: post
 publish: true
-comments: true
+comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
+image:
+  path: /assets/raw-story.png
 ---
 
 Earlier this year, researchers discovered a serious vulnerability in the API of the dating app Raw. The flaw allowed anyone to access the personal data (names, dates of birth, preferences) and even precise location data of Raw users.
