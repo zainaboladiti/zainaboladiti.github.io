@@ -1,5 +1,5 @@
 ---
-title: "Understanding OWASP API1:2023 - Broken Object Level Authorization (BOLA)"
+title: "Understanding OWASP API01:2023 - Broken Object Level Authorization (BOLA)"
 date: 2025-12-06 21:00:00 +0000
 categories: [AppSec, API Security]
 tags: [api-security, bola, idor, data privacy, APISecurity, InfoSec, application security, owasp top 10, devsecops]
@@ -10,7 +10,7 @@ image:
   path: /assets/img/bola1.png
 ---
 ## Introduction
-Broken Object Level Authorization, commonly known as BOLA, sits at the top of the OWASP API Security Top 10 list as API1:2019 and API1:2023. It is the most common vulnerability found in APIs today, affecting applications across every industry from healthcare to finance to social media.
+Broken Object Level Authorization, commonly known as BOLA, sits at the top of the OWASP API Security Top 10 list as API01:2019 and API01:2023. It is the most common vulnerability found in APIs today, affecting applications across every industry from healthcare to finance to social media.
 
 At its core, BOLA is a simple concept with devastating consequences. It happens when an API fails to properly validate whether a user should have access to a specific resource or object. The API checks if the user is logged in, but it doesn't verify if they should be accessing that particular piece of data. It's like a security guard who checks that visitors have a badge to enter the building but never verifies which floors or rooms they're actually allowed to access.
 
