@@ -59,15 +59,15 @@ The breach underscores that even large organisations can fall victim to very bas
 
 Preventing BOLA requires a multi-layered approach that combines secure coding practices, architectural decisions and ongoing security testing.
 
-**Implement Authorization Checks Everywhere**: every single API endpoint that accesses a specific object must verify that the requesting user has permission to access that object. This check should happen on the server-side, never rely on client-side validation. The pattern should be: authenticate the user, identify the requested object, verify the user's permission for that specific object, then return or deny the data.
+**Implement Authorization Checks Everywhere**: every single API endpoint that accesses a specific object must verify that the requesting user has permission to access that object. This check should happen on the server-side, developers should never rely on client-side validation. The pattern should be: authenticate the user, identify the requested object, verify the user's permission for that specific object, then return or deny the data.
 
-**Use Indirect Object References**: instead of exposing database IDs or sequential numbers in APIs, use random UUIDs or tokens that don't reveal anything about the data structure. Better yet, derive the object reference from the user's session. For example, instead of `/api/users/1234/orders/5678`, use `/api/my-orders/5678` where the user ID comes from the authenticated session, not the URL.
+**Use Indirect Object References**: instead of exposing database IDs or sequential numbers in APIs, developers should use random UUIDs or tokens that don't reveal anything about the data structure.
 
-**Implement Role-Based Access Control (RBAC)**: define clear roles and permissions in system. A user might be an owner, viewer or editor of a resource. API should check both that the user is authenticated and that their role permits the requested action on that specific object.
+**Implement Role-Based Access Control (RBAC)**: before the development phase, define clear roles and permissions in system. A user might be an owner, viewer or editor of a resource. API should check both that the user is authenticated and that their role permits the requested action on that specific object.
 
 **Apply the Principle of Least Privilege**: users should only be able to access the minimum data necessary for their legitimate use. If a customer service representative only needs to see basic account information, the API shouldn't even allow requests for sensitive financial details, regardless of authorization.
 
-**Log and Monitor Access Patterns**: implement comprehensive logging of who accesses what and when. Set up monitoring to detect unusual patterns like a user suddenly accessing far more objects than normal, sequential ID enumeration, or attempts to access objects outside their normal scope.
+**Log and Monitor Access Patterns**: system should implement comprehensive logging of who accesses what and when. Set up monitoring to detect unusual patterns like a user suddenly accessing far more objects than normal, sequential ID enumeration, or attempts to access objects outside their normal scope.
 
 **Conduct Regular Security Testing**: include BOLA testing in security assessment process. This should involve both automated scanning with tools designed to detect authorization issues and manual penetration testing where security professionals attempt to access resources they shouldn't.
 
@@ -79,7 +79,7 @@ Preventing BOLA requires a multi-layered approach that combines secure coding pr
 
 Broken Object Level Authorization remains the number one API security risk because it's both common and impactful. The Optus breach demonstrated that even major organisations with significant resources can fall victim to this fundamental vulnerability. The exploitation is straightforward, the impact is severe and the data exposed can affect millions of people.
 
-By implementing thorough authorization checks, using indirect object references, following the principle of least privilege, and conducting regular security testing, organisations can protect their APIs and their users' data from this threat.
+By implementing thorough authorization checks, using indirect object references, following the principle of least privilege and conducting regular security testing, organisations can protect their APIs and their users' data from this threat.
 
 As APIs continue to power more of our digital infrastructure, securing them against BOLA and other vulnerabilities isn't just a technical requirement, it's a fundamental responsibility to the users who trust us with their data.
 
