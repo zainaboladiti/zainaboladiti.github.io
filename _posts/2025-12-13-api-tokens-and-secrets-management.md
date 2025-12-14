@@ -7,14 +7,14 @@ layout: post
 publish: true
 comments: true # <-- THIS LINE ENABLES GISCUS COMMENTS
 image:
-  # path: /assets/img/bola1.png
+  path: /assets/img/tokens.png
 ---
  
 ## The Scale of the Problem
 
-In 2024, GitHub detected over 39 million leaked secrets across its platform. Thirty-nine million API keys, tokens, credentials, and other sensitive authentication data exposed in public repositories where anyone with basic search skills could find them. To put this in perspective, GitHub's push protection system blocks several secrets every single minute, yet the leaks continue at an alarming rate.
+In 2024, GitHub detected over 39 million leaked secrets across its platform [1]. Thirty-nine million API keys, tokens, credentials, and other sensitive authentication data exposed in public repositories where anyone with basic search skills could find them. To put this in perspective, GitHub's push protection system blocks several secrets every single minute, yet the leaks continue at an alarming rate.
 
-GitGuardian found that in 2023, 12.8 million authentication secrets were exposed across more than 3 million public repositories. The numbers are staggering, but what do they actually mean? Each leaked secret represents a potential breach. An exposed AWS key can result in tens of thousands of dollars in unauthorised cloud resource usage. A leaked database credential can expose customer data. A compromised API token can give attackers access to private systems and services.
+GitGuardian found that in 2023, 12.8 million authentication secrets were exposed across more than 3 million public repositories [2]. The numbers are staggering, but what do they actually mean? Each leaked secret represents a potential breach. An exposed AWS key can result in tens of thousands of dollars in unauthorised cloud resource usage. A leaked database credential can expose customer data. A compromised API token can give attackers access to private systems and services.
 
 ## Observing the Leak Landscape on GitHub
 
@@ -86,7 +86,7 @@ Public credential leaks damage organisational reputation, customers lose trust w
 
 Preventing secret leaks requires a combination of tools, processes, and cultural changes within development teams
 
-### Never Commit Secrets to Version Control
+### Avoid Committing Secrets to Version Control
 
 API keys, passwords, tokens, private keys, and any other sensitive credentials should never be committed to Git, regardless of whether the repository is public or private. Private repositories can become public and access permissions can change. The safest approach is to treat all version control as potentially public.
 
@@ -101,7 +101,7 @@ api_key = os.environ.get('API_KEY')
 api_key = "sk_live_abc123xyz789"
 ```
 
-### Comprehensive .gitignore From Day One
+### Create a Comprehensive .gitignore From Day One
 
 It's important to create a comprehensive .gitignore file that excludes common files where secrets might live:
 
@@ -129,7 +129,7 @@ Use secrets management services to securely store and access credentials:
 
 Application should fetch credentials from these services at runtime using temporary, scoped access credentials. The actual secrets never exist in the codebase or configuration files.
 
-### Rotate Secrets Regularly
+### Rotating Secrets Regularly
 
 Regular credential rotation limits exposure. If a secret get compromised, regular rotation ensures it's only valid for a limited time.
 
@@ -175,8 +175,8 @@ As development velocity increases and AI-assisted coding becomes more common, th
 The secrets we leak today become the breaches we read about tomorrow. But with vigilance, proper tools, and a commitment to security, we can break this cycle and keep our credentials where they belong: secret.
 
 ## References:
-- GitHub 2024 Secret Leaks Report: https://github.blog/security/application-security/next-evolution-github-advanced-security/
-- GitGuardian 2023 State of Secrets Sprawl: https://www.bleepingcomputer.com/news/security/over-12-million-auth-secrets-and-keys-leaked-on-github-in-2023/
-- BleepingComputer GitHub Security Analysis: https://www.bleepingcomputer.com/news/security/github-expands-security-tools-after-39-million-secrets-leaked-in-2024/
-- GitHub Search Patterns: https://gist.github.com/win3zz/0a1c70589fcbea64dba4588b93095855
-- https://trufflesecurity.com/blog/thousands-of-github-comments-leak-live-api-keys 
+1.  GitHub 2024 Secret Leaks Report: https://github.blog/security/application-security/next-evolution-github-advanced-security/
+2.  GitGuardian 2023 State of Secrets Sprawl: https://www.bleepingcomputer.com/news/security/over-12-million-auth-secrets-and-keys-leaked-on-github-in-2023/
+3.  BleepingComputer GitHub Security Analysis: https://www.bleepingcomputer.com/news/security/github-expands-security-tools-after-39-million-secrets-leaked-in-2024/
+4.  GitHub Search Patterns: https://gist.github.com/win3zz/0a1c70589fcbea64dba4588b93095855
+5.  https://trufflesecurity.com/blog/thousands-of-github-comments-leak-live-api-keys 
