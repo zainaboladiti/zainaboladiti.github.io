@@ -34,7 +34,7 @@ What makes this concerning is that automated tools constantly scan GitHub for ex
 
 To be clear, I did not attempt to use, validate, or exploit any of the credentials I found. The point of this research was simply to observe how prevalent the problem is and understand the patterns of exposure. The ease with which these secrets can be found is itself the security issue.
 
-## How Secrets Actually Leak
+## How Secrets Get Leaked
 
 Understanding how secrets end up on GitHub requires looking at the development workflow and the various ways credentials can slip through the cracks.
 
