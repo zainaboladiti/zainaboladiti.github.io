@@ -70,8 +70,6 @@ This reconnaissance phase revealed several interesting endpoints, including one 
 
 ## Finding #1: The Debug Endpoint That Exposed Everything
 
-### The Discovery
-
 While exploring the API, I discovered an unauthenticated debug endpoint at `/users/v1/_debug`. Out of curiosity, I sent a simple GET request to this endpoint.
 
 **What I Expected:** An error message or authentication challenge  
@@ -133,8 +131,6 @@ This single vulnerability represents a complete security failure:
 ---
 
 ## Finding #2: Creating Admin Accounts Through Mass Assignment
-
-### The Discovery
 
 With knowledge of the database structure from the debug endpoint, I turned my attention to the user registration endpoint at `POST /users/v1/register`.
 
