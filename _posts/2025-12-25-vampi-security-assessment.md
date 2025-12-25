@@ -236,8 +236,6 @@ def register():
 
 ## Finding #3: Taking Over Any Account
 
-### The Discovery
-
 With my newly created admin account, I tested whether authorization controls were properly implemented on other sensitive endpoints. I targeted the password update endpoint at `PUT /users/v1/{username}/password`.
 
 ### The Vulnerability
