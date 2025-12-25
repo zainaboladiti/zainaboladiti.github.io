@@ -389,7 +389,7 @@ This demonstrates why security must be comprehensive - a chain is only as strong
    - Verify permissions server-side (never trust client data)
 
 5. **Hash Passwords**
-   - Replace plaintext passwords with bcrypt or Argon2 hashes
+   - Replace plaintext passwords with hashes
    - Force all users to reset passwords
    - Implement minimum password requirements
 
@@ -441,7 +441,6 @@ Debug functionality is invaluable during development but catastrophic in product
 ### 2. Implement Defense in Depth
 
 Security should exist at multiple layers:
-- **Network Layer:** Firewalls, rate limiting
 - **Application Layer:** Authentication, authorization, input validation
 - **Data Layer:** Encryption, hashing, access controls
 
@@ -469,86 +468,22 @@ Users and services should have only the minimum permissions necessary:
 
 ---
 
-## Lessons for Security Professionals
-
-### 1. Think Like an Attacker
-
-Security assessments require an attacker's mindset:
-- Question every assumption
-- Test edge cases and unexpected inputs
-- Chain vulnerabilities together
-- Consider the business impact, not just technical severity
-
-### 2. Document Everything
-
-Comprehensive documentation serves multiple purposes:
-- Provides clear reproduction steps
-- Justifies severity ratings
-- Enables developers to fix issues
-- Creates a reference for future assessments
-
-### 3. Prioritize by Business Impact
-
-Technical severity is important, but business impact drives remediation:
-- Consider data sensitivity
-- Evaluate regulatory implications
-- Assess reputational risk
-- Factor in ease of exploitation
-
-### 4. Provide Actionable Recommendations
-
-Good security reports include:
-- Clear descriptions of vulnerabilities
-- Proof-of-concept demonstrations
-- Specific, actionable remediation steps
-- Code examples when applicable
-- Verification criteria
-
----
-
-## Tools and Resources
-
-### Tools Used in This Assessment
+## Tools Used in This Assessment
 
 - **Postman:** API testing and request manipulation
 - **Docker:** Container deployment and management
 - **VS Code:** Documentation and code review
-
-### Recommended Learning Resources
-
-**OWASP API Security Project:**
-- [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
-- Documentation of common API vulnerabilities
-- Testing guides and checklists
-
-**Practice Environments:**
-- [VamPI](https://github.com/erev0s/VAmPI) - Vulnerable API for training
-- [DVWA](https://github.com/digininja/DVWA) - Damn Vulnerable Web Application
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security) - Free training with labs
-
-**Security Standards:**
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [CWE Top 25](https://cwe.mitre.org/top25/) - Most dangerous software weaknesses
-
 ---
 
 ## Conclusion
 
 This assessment of VamPI revealed critical vulnerabilities that, while demonstrated in a training environment, mirror real-world security flaws found in production APIs. The combination of excessive data exposure, mass assignment, and broken authorization created a clear path from zero access to complete system compromise.
 
-**The key lesson:** API security requires a comprehensive approach. Individual vulnerabilities can be severe, but when combined, they create attack chains that dramatically increase risk.
+API security requires a comprehensive approach. Individual vulnerabilities can be severe, but when combined, they create attack chains that dramatically increase risk.
 
-For organizations deploying APIs, the message is clear: security cannot be an afterthought. Proper authentication, authorization, input validation, and secure configuration must be built into every API from the start.
+For organizations deploying APIs, security cannot be an afterthought. Proper authentication, authorization, input validation, and secure configuration must be built into every API from the start.
 
-**For aspiring security professionals:** Understanding how to discover, exploit, and remediate vulnerabilities is essential. But equally important is the ability to communicate findings effectively to both technical and non-technical stakeholders.
-
----
-
-## About This Assessment
-
-This security assessment was conducted as part of API security training using VamPI, an intentionally vulnerable application created for educational purposes. The vulnerabilities described are real and representative of issues found in production systems, but no actual systems or data were compromised during this assessment.
-
-**Interested in discussing API security?** Feel free to reach out through my [blog contact form](#) or connect with me on [LinkedIn](#).
+**Interested in discussing API security?** Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zainab-oladiti/).
 
 ---
 
