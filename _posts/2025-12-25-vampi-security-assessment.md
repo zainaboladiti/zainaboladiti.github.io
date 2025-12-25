@@ -277,19 +277,19 @@ After changing the admin password, I:
 2. Verified full administrative access
 3. Demonstrated persistence by deleting the original admin account entirely
 ![App running locally3](/assets/img/vampi/deleted.png)
+![App running locally3](/assets/img/vampi/deleted2.png)
 
-### Understanding Broken Function Level Authorization
+### Understanding Broken Function Level Authorization (BFLA)
 
 This vulnerability type (BFLA) occurs when:
 - An API endpoint performs a sensitive function (password change, deletion, privilege modification)
-- The endpoint checks *if* a user is authenticated
-- But fails to check *whether that specific user should be allowed* to perform the action
+- The endpoint checks *if* a user is authenticated, but fails to check *whether that specific user should be allowed* to perform the action
 
 **Analogy:** It's like a building that checks if you have *any* key card to enter, but doesn't verify whether your specific card should open *this particular* door.
 
 ### The Impact
 
-This vulnerability enables complete account takeover:
+This vulnerability enables complete account takeover
 
 1. **Lateral Movement:** Change passwords for any user account
 2. **Privilege Preservation:** Lock out legitimate administrators by changing their passwords
@@ -299,11 +299,11 @@ This vulnerability enables complete account takeover:
 **CVSS Score:** 9.6 (Critical)  
 **OWASP Category:** API5:2023 (Broken Function Level Authorization)
 
-### How to Fix It
+### Security Recommendation
 
 **Immediate Actions:**
 
-1. **Implement proper authorization checks:**
+1. **Implement proper authorization checks**
 
 ```python
 @app.route('/users/<username>/password', methods=['PUT'])
@@ -330,7 +330,7 @@ def change_password(username):
     return {"status": "password changed"}
 ```
 
-2. **Add security notifications:**
+2. **Add security notifications**
    - Email users when their password is changed
    - Provide a mechanism to report unauthorized changes
 
@@ -358,9 +358,6 @@ When combined, these three vulnerabilities create a trivial path to complete sys
 4. Login as admin
    → Full system control achieved
    
-Total Time: < 5 minutes
-Authentication Required: None
-Skill Level: Beginner
 ```
 
 This demonstrates why security must be comprehensive - a chain is only as strong as its weakest link.
