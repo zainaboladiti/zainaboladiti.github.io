@@ -17,7 +17,7 @@ The assessment focused on identifying vulnerabilities aligned with the OWASP API
 - Real-world security flaws that affect production systems
 - Practical remediation strategies for securing APIs
 
-> **Note:** This assessment was conducted in a controlled lab environment using VamPI, a deliberately vulnerable application created for educational purposes. No real systems were harmed.
+> **Note:** This assessment was conducted in a controlled lab environment using VamPI, a deliberately vulnerable application created for educational purposes. No real systems were exploited.
 
 ## Assessment Overview
 
