@@ -465,8 +465,6 @@ Users and services should have only the minimum permissions necessary:
 - **Docker** for Container deployment and management
 - **VSCode:** for documentation and code review
 
-- **VS Code:** Documentation and code review
-
 ## Conclusion
 
 This assessment of VamPI revealed critical vulnerabilities that, while demonstrated in a training environment, mirror real-world security flaws found in production APIs. The combination of excessive data exposure, mass assignment, and broken authorization created a clear path from zero access to complete system compromise.
