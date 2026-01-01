@@ -12,11 +12,6 @@ In this technical report, I document my security assessment of VamPI (Vulnerable
 
 The assessment focused on identifying vulnerabilities aligned with the OWASP API Security Top 10, specifically targeting authentication bypass, authorization failures, and data exposure issues.
 
-**What You'll Learn:**
-- How attackers discover and exploit API vulnerabilities
-- Real-world security flaws that affect production systems
-- Practical remediation strategies for securing APIs
-
 > **Note:** This assessment was conducted in a controlled lab environment using VamPI, a deliberately vulnerable application created for educational purposes. No real systems were exploited.
 
 ## Assessment Overview
