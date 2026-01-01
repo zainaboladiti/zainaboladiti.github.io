@@ -461,10 +461,11 @@ Users and services should have only the minimum permissions necessary:
 
 ## Tools Used in This Assessment
 
-- **Postman:** API testing and request manipulation
-- **Docker:** Container deployment and management
+- **Postman** for API testing and request manipulation
+- **Docker** for Container deployment and management
+- **VSCode:** for documentation and code review
+
 - **VS Code:** Documentation and code review
----
 
 ## Conclusion
 
@@ -474,7 +475,7 @@ API security requires a comprehensive approach. Individual vulnerabilities can b
 
 For organizations deploying APIs, security cannot be an afterthought. Proper authentication, authorization, input validation, and secure configuration must be built into every API from the start.
 
-**Interested in discussing API security?** Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zainab-oladiti/).
+**Interested in discussing API security or any cybersecurity related project?** Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zainab-oladiti/).
 
 ---
 
