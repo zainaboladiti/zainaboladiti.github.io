@@ -245,6 +245,7 @@ The endpoint allowed authenticated users to change passwords for *any* username 
 
 **Step 1:** Obtained an authentication token by logging in as `testuser` (my mass-assigned admin account)
 ![App running locally3](/assets/img/vampi/login2.png)
+
 **Step 2:** Changed another user's password
 
 ```
@@ -258,7 +259,7 @@ Authorization: Bearer [testuser_token]
 
 **Response:** `{"status": "password changed"}`
 
-**Step 3:** Verified by logging in as `admin` with the new password - success!
+**Step 3:** Verified by logging in as `admin` with the new password - success
 ![App running locally3](/assets/img/vampi/debug2.png)
 
 ### Escalating to Full System Compromise
