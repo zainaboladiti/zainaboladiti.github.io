@@ -17,6 +17,7 @@ The assessment focused on identifying vulnerabilities aligned with the OWASP API
 ## Assessment Overview
 
 **Target Application:** VamPI ([Vulnerable API](https://github.com/erev0s/VAmPI))
+
 **Environment:** Local Docker Container  
 **Methodology:** Black-box penetration testing  
 
@@ -244,9 +245,9 @@ The endpoint allowed authenticated users to change passwords for *any* username 
 
 **Step 1:** Obtained an authentication token by logging in as `testuser` (my mass-assigned admin account)
 ![App running locally3](/assets/img/vampi/login2.png)
-**Step 2:** Changed another user's password:
+**Step 2:** Changed another user's password
 
-```http
+```
 PUT /users/v1/name1/password
 Authorization: Bearer [testuser_token]
 
