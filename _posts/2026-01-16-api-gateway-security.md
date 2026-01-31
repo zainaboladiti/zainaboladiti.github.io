@@ -1,7 +1,7 @@
 ---
 title: "Why API Gateways Are Critical for Securing Public APIs"
 date: 2026-01-16 17:39:00
-categories: [AppSec, API Security, Cloud Security]
+categories: [AppSec, API Security, Cloud Security, DevSecOps]
 tags: [api-security, data privacy, APISecurity, InfoSec, application security, owasp top 10, devsecops, API, api-gateway, aws, security, rate-limiting]
 layout: post
 publish: true
