@@ -51,33 +51,15 @@ Whilst many developers think of rate limiting primarily as a performance optimis
 
 ### How Rate Limiting Works
 
-Rate limiting controls both the steady-state request rate and the ability to handle traffic bursts. In this model, each request consumes a token from a bucket. The bucket has a maximum capacity (the burst limit) and tokens are added back at a fixed rate (the rate limit). When the bucket is empty, requests are throttled and receive a 429 Too Many Requests error response.
+Rate limiting implements the token bucket algorithm, which controls both the steady-state request rate and the ability to handle traffic bursts. In this model, each request consumes a token from a bucket, the bucket has a maximum capacity (the burst limit) and tokens are added back at a fixed rate (the rate limit). When the bucket is empty, requests are throttled and receive a 429 Too Many Requests error response.
 
 ### Protection Against Attack Vectors
 
 From a security perspective, rate limiting protects against several attack vectors:
 
-**Brute Force Attacks:** Brute force attacks, where attackers attempt to guess credentials or API keys through repeated requests, become impractical when rate limits are enforced. Credential stuffing attacks, which use leaked username and password combinations across multiple services, are similarly mitigated because rate limits prevent attackers from testing large volumes of credentials quickly. Organisations that implement proper rate limiting can significantly reduce the success rate of automated authentication attacks.
+**Brute Force Attacks** where attackers attempt to guess credentials or API keys through repeated requests. Credential stuffing attacks, which use leaked username and password combinations across multiple services, are alsomitigated because rate limits prevent attackers from testing large volumes of credentials quickly. Organisations that implement proper rate limiting can significantly reduce the success rate of automated authentication attacks.
 
-**Denial-of-Service Protection:** Denial-of-service protection represents another critical security function. By limiting the number of requests any single client can make, rate limiting prevents individual actors from monopolising system resources. This ensures that legitimate users maintain access even when the system is under attack.
-
-### AWS API Gateway Rate Limiting Configuration
-
-AWS API Gateway provides several layers of rate limiting that can be configured to match specific security requirements:
-
-**Account-Level Limits:** Account-level limits apply across all APIs in a region, providing a safety net that prevents any single API from consuming excessive resources. These limits default to 10,000 requests per second with a burst capacity of 5,000 requests in most regions.
-
-**Stage-Level and Method-Level Throttling:** Stage-level and method-level throttling allows more granular control, enabling different limits for development, testing, and production environments, or for specific endpoints that handle sensitive operations.
-
-**Usage Plans with API Keys:** Usage plans with API keys enable per-client rate limiting, which is particularly important for securing public APIs. This approach prevents any single client from overwhelming the system whilst maintaining service availability for others.
-
-A typical rate-limiting configuration might look like this:
-- **Rate:** 1,000 requests per second
-- **Burst:** 2,000 requests
-- **Per-client limit:** 100 requests per second per API key
-- **Monthly quota:** 1,000,000 requests per client
-
-This configuration allows normal traffic spikes whilst preventing sustained high-volume attacks. The burst capacity handles legitimate traffic surges, such as when users log in at the start of the business day, whilst the rate limit prevents prolonged abuse.
+**Denial-of-Service Protection** by limiting the number of requests any single client can make. Rate limiting prevents individual actors from monopolising system resources and this ensures that legitimate users maintain access even when the system is under attack.
 
 ### Cost Control as a Security Dimension
 
@@ -87,11 +69,11 @@ Rate limiting acts as a financial safeguard by capping the maximum number of req
 
 ## Real-World Attack Prevention
 
-Consider a common attack scenario where threat actors discover an unprotected API endpoint that exposes user data. Without an API gateway, they could query this endpoint repeatedly to enumerate all users in the system. However, with proper gateway security controls in place, multiple defensive layers activate.
+Consider an attack scenario where threat actors discover an unprotected API endpoint that exposes user data. Without an API gateway, they could query this endpoint repeatedly to enumerate all users in the system. However, with proper gateway security controls in place, multiple defensive layers activate.
 
 First, authentication requirements block unauthorised access entirely. If the attacker somehow obtains valid credentials, rate limiting restricts how much data can be extracted before the system flags and blocks the suspicious activity. Request validation might detect and reject malformed queries designed to bypass access controls. Logging and monitoring capture the attack attempts, enabling security teams to respond and investigate.
 
-The 2021 Peloton API vulnerability demonstrated the importance of proper API security controls. Security researcher Jan Masters from Pen Test Partners discovered that Peloton's APIs exposed user data without adequate authentication and authorisation, allowing anyone to access private user information including age, gender, location, and workout statistics by making unauthenticated requests[^2]. An API gateway with proper authentication and rate limiting would have prevented this unauthorised data access[^3].
+The 2021 Peloton API vulnerability demonstrated the importance of proper API security controls. Security researcher Jan Masters from Pen Test Partners discovered that Peloton's APIs exposed user data without adequate authentication and authorisation, allowing anyone to access private user information including age, gender, location, and workout statistics by making unauthenticated requests[^2] [^3]. An API gateway with proper authentication and rate limiting would have prevented this unauthorised data access.
 
 This layered defence demonstrates why API gateways have become essential infrastructure for any organisation exposing APIs to external consumers. They transform API security from a patchwork of individual service protections into a cohesive, centrally managed security architecture that can adapt to emerging threats whilst maintaining performance and availability.
 
