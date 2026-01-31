@@ -39,11 +39,11 @@ Request validation provides another critical security layer. API gateways can in
 
 ### Transport Layer Security (TLS) Enforcement
 
-Transport Layer Security (TLS) enforcement ensures that all communication between clients and the gateway remains encrypted. AWS API Gateway supports enhanced TLS security policies that enforce modern encryption standards, including TLS 1.3-only configurations and cipher suites that meet regulatory requirements like PCI DSS and FIPS compliance. These policies protect sensitive data from interception during transmission.
+TLS enforcement ensures that all communication between clients and the gateway remains encrypted. API Gateway supports enhanced TLS security policies that enforce modern encryption standards, including TLS 1.3-only configurations and cipher suites that meet regulatory requirements like PCI DSS and FIPS compliance. These policies protect sensitive data from interception during transmission.
 
 ### Web Application Firewall (WAF) Integration
 
-Integration with Web Application Firewalls adds protection against common web attacks. When an API gateway connects with AWS WAF, it can filter requests based on IP addresses, geographic regions, request patterns, and known attack signatures. This helps block SQL injection attempts, cross-site scripting attacks, and bot traffic before these threats reach application logic.
+Integration with WAF adds protection against common web attacks. When an API gateway connects with WAF, it can filter requests based on IP addresses, geographic regions, request patterns, and known attack signatures. This helps block SQL injection attempts, cross-site scripting attacks, and bot traffic before these threats reach application logic.
 
 ## Rate Limiting as a Security Control
 
@@ -51,7 +51,7 @@ Whilst many developers think of rate limiting primarily as a performance optimis
 
 ### How Rate Limiting Works
 
-Rate limiting implements the token bucket algorithm, which controls both the steady-state request rate and the ability to handle traffic bursts. In this model, each request consumes a token from a bucket. The bucket has a maximum capacity (the burst limit) and tokens are added back at a fixed rate (the rate limit). When the bucket is empty, requests are throttled and receive a 429 Too Many Requests error response.
+Rate limiting controls both the steady-state request rate and the ability to handle traffic bursts. In this model, each request consumes a token from a bucket. The bucket has a maximum capacity (the burst limit) and tokens are added back at a fixed rate (the rate limit). When the bucket is empty, requests are throttled and receive a 429 Too Many Requests error response.
 
 ### Protection Against Attack Vectors
 
