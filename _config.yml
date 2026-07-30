@@ -88,7 +88,7 @@ pageviews:
 #
 # theme_mode: # [light | dark]
 
-theme_mode: [light]
+theme_mode: []
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
