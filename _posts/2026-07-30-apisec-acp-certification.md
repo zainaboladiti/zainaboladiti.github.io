@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I Prepared for the APIsec Certified Practitioner (ACP) Exam"
-date: 2026-07-30 09:00:00 +0100
+date: 2026-07-30 10:00:00 +0100
 categories: [AppSec, API Security, Certification]
 tags: [api-security, cybersecurity, certification, appsec, penetration-testing, APISecurity, InfoSec, application security, owasp top 10, API, security]
 layout: post
